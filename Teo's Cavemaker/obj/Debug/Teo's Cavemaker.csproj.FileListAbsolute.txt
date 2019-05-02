@@ -1,0 +1,11 @@
+C:\Users\extra\Desktop\Projekty desktopowe\Teo's Cavemaker\Teo's Cavemaker\bin\Debug\Teo's Cavemaker.exe.config
+C:\Users\extra\Desktop\Projekty desktopowe\Teo's Cavemaker\Teo's Cavemaker\bin\Debug\Teo's Cavemaker.exe
+C:\Users\extra\Desktop\Projekty desktopowe\Teo's Cavemaker\Teo's Cavemaker\bin\Debug\Teo's Cavemaker.pdb
+C:\Users\extra\Desktop\Projekty desktopowe\Teo's Cavemaker\Teo's Cavemaker\obj\Debug\Teo's Cavemaker.csprojAssemblyReference.cache
+C:\Users\extra\Desktop\Projekty desktopowe\Teo's Cavemaker\Teo's Cavemaker\obj\Debug\Teo_s_Cavemaker.Form1.resources
+C:\Users\extra\Desktop\Projekty desktopowe\Teo's Cavemaker\Teo's Cavemaker\obj\Debug\Teo_s_Cavemaker.Properties.Resources.resources
+C:\Users\extra\Desktop\Projekty desktopowe\Teo's Cavemaker\Teo's Cavemaker\obj\Debug\Teo's Cavemaker.csproj.GenerateResource.cache
+C:\Users\extra\Desktop\Projekty desktopowe\Teo's Cavemaker\Teo's Cavemaker\obj\Debug\Teo's Cavemaker.csproj.CoreCompileInputs.cache
+C:\Users\extra\Desktop\Projekty desktopowe\Teo's Cavemaker\Teo's Cavemaker\obj\Debug\Teo's Cavemaker.exe
+C:\Users\extra\Desktop\Projekty desktopowe\Teo's Cavemaker\Teo's Cavemaker\obj\Debug\Teo's Cavemaker.pdb
+C:\Users\extra\Desktop\Projekty desktopowe\Teo's Cavemaker\Teo's Cavemaker\obj\Debug\Teo_s_Cavemaker.Form2.resources
