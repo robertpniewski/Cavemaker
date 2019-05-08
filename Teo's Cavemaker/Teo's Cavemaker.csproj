@@ -12,6 +12,22 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -75,6 +91,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -89,5 +106,33 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Tiles\Black Tile.png" />
+    <Content Include="Resources\Tiles\Boulder.PNG" />
+    <Content Include="Resources\Tiles\Door.PNG" />
+    <Content Include="Resources\Tiles\Gem.PNG" />
+    <Content Include="Resources\Tiles\Hannah.PNG" />
+    <Content Include="Resources\Tiles\Left Arrow.PNG" />
+    <Content Include="Resources\Tiles\Middle Platform.png" />
+    <Content Include="Resources\Tiles\Right Arrow.png" />
+    <Content Include="Resources\Tiles\Stalactite.PNG" />
+    <Content Include="Resources\Tiles\Stalagmite.png" />
+    <Content Include="Resources\Tiles\Steel Crate.png" />
+    <Content Include="Resources\Tiles\Steel Dynamite.PNG" />
+    <Content Include="Resources\Tiles\Terrain.png" />
+    <Content Include="Resources\Tiles\Treasure.png" />
+    <Content Include="Resources\Tiles\Wooden Crate.png" />
+    <Content Include="Resources\Tiles\Wooden Dynamite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>echo D|xcopy "$(SolutionDir)Teo's Cavemaker\Resources" "$(TargetDir)Resources" /S /Y</PostBuildEvent>
+  </PropertyGroup>
 </Project>
