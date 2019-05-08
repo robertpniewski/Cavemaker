@@ -1,14 +1,10 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
-using System.Windows;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading.Tasks;
 
 namespace Teo_s_Cavemaker
 {
@@ -53,7 +49,7 @@ namespace Teo_s_Cavemaker
                 DoubleBuffered = true;
                 Selected = false;
                 TileName = "Black Tile";
-                CaveBitmap = new Bitmap(@"C:\Users\extra\Desktop\Projekty desktopowe\Teo's Cavemaker\Teo's Cavemaker\tiles\Black Tile.png");
+                CaveBitmap = new Bitmap("Resources/Tiles/Black Tile.png");
             }
 
             public CaveTile(CaveTile ct)
@@ -243,27 +239,27 @@ namespace Teo_s_Cavemaker
             Parallel.For(0, CaveWidth, i =>
             {
                 Parallel.For(0, CaveHeight, j =>
-                {
-                    CaveTile ct;
-                    if (!ResizeMode || i >= clp.ColumnCount || j >= clp.RowCount)
-                    {
-                        ct = new CaveTile()
-                        {
-                            Tag = (i, j),
-                            Name = i.ToString() + "," + j.ToString()
-                        };
-                    }
-                    else
-                    {
-                        ct = new CaveTile(clp.Controls[i.ToString() + "," + j.ToString()] as CaveTile);
-                        if (ct.Selected)
-                        {
-                            ct.Selected = false;
-                            ToInvert.Add(ct);
-                        }
-                    }
-                    array2d[i, j] = ct;
-                });
+               {
+                   CaveTile ct;
+                   if (!ResizeMode || i >= clp.ColumnCount || j >= clp.RowCount)
+                   {
+                       ct = new CaveTile()
+                       {
+                           Tag = (i, j),
+                           Name = i.ToString() + "," + j.ToString()
+                       };
+                   }
+                   else
+                   {
+                       ct = new CaveTile(clp.Controls[i.ToString() + "," + j.ToString()] as CaveTile);
+                       if (ct.Selected)
+                       {
+                           ct.Selected = false;
+                           ToInvert.Add(ct);
+                       }
+                   }
+                   array2d[i, j] = ct;
+               });
             });
             
             for (int i = 0; i < CaveWidth; ++i)
@@ -317,7 +313,7 @@ namespace Teo_s_Cavemaker
             PrepareDictionary();
             CreateCavePanel();
 
-            DirectoryInfo di = new DirectoryInfo(@"C:\Users\extra\Desktop\Projekty desktopowe\Teo's Cavemaker\Teo's Cavemaker\tiles");
+            DirectoryInfo di = new DirectoryInfo("Resources/Tiles");
             var tiles = di.GetFiles();
 
             TableLayoutPanel tilesList = new TableLayoutPanel
@@ -494,7 +490,7 @@ namespace Teo_s_Cavemaker
                 case Keys.Delete:
                     foreach (CaveTile SelectedTile in SelectedTiles)
                     {
-                        SelectedTile.CaveBitmap = new Bitmap(@"C:\Users\extra\Desktop\Projekty desktopowe\Teo's Cavemaker\Teo's Cavemaker\tiles\Black Tile.png");
+                        SelectedTile.CaveBitmap = new Bitmap("Resoures/tiles/Black Tile.png");
                         SelectedTile.TileName = "Black Tile";
                     }
                     ApplyNegative(SelectedTiles);
